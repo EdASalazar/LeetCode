@@ -1,12 +1,11 @@
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
         ans = []
-        j = 0
-        k = 1
         
         for i in range(len(nums1)):
-            for j in range(len(nums2)):
+            for j in range(0, len(nums2)):
                 pointer, curr = 1, 0
+                
                 if nums1[i] == nums2[j]:
                     curr = nums2[j]
                     
