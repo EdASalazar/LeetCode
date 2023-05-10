@@ -5,7 +5,6 @@ class Solution:
 
         # print(newArr[0][::-1])
         for i in range(0, len(newArr)):
-            reversedWord = newArr[i][::-1]
-            ans.append(reversedWord) 
+            ans.append(newArr[i][::-1]) 
     
         return " ".join(ans)
