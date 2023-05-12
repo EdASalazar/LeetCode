@@ -4,12 +4,10 @@ class Solution:
         
         for right in range(len(nums)):
             k -= 1 - nums[right]
-            print(k)
             
             if k < 0:
                 k += 1 - nums[left]
                 left += 1
-
         
         return right - left +1
             
