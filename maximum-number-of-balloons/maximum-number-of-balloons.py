@@ -1,5 +1,3 @@
-from collections import Counter
-
 class Solution:
     def maxNumberOfBalloons(self, text: str) -> int:
         b = text.count('b')
