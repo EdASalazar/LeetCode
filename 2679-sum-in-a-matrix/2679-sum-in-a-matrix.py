@@ -1,6 +1,5 @@
 class Solution:
     def matrixSum(self, nums: List[List[int]]) -> int:
-        highest_scores = []
         ans = 0
         nums = [sorted(num) for num in nums]
 
