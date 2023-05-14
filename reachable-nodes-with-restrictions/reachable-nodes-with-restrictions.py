@@ -16,8 +16,8 @@ class Solution:
             u, v = edge
             graph[u].append(v)
             graph[v].append(u)
-        
+        seen.add(0)
         dfs(0)
         
-        return max(1, len(seen) - len(restricted))
+        return len(seen) - len(restricted)
         
