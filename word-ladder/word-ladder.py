@@ -11,7 +11,7 @@ class Solution:
         for word in wordList:
             for i in range(len(word)):
                 adjacent[word[:i] + '*' + word[i+1:]].append(word)
-            # print(adjacent)
+
         
         visited = set()
         queue = deque([(beginWord, 1)])
