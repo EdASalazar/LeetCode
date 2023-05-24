@@ -10,6 +10,5 @@ class Solution:
             numTwo = heapq.heappop(sticks)
             cost += numOne + numTwo
             heapq.heappush(sticks, (numOne + numTwo))
-            # print(numOne, numTwo, cost, sticks)
             
         return cost    
