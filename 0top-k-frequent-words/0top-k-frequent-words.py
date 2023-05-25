@@ -10,7 +10,7 @@ class Solution:
             heapq.heappush(heap, (-val, key))
             
         
-        print(heap)
+
         return [heappop(heap)[1] for _ in range(k) ]
             
         
