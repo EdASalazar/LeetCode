@@ -6,10 +6,7 @@ class Solution:
         heap = []
         
         for point in points: 
-            pointOne = point[0]
-            pointTwo = point[1]
-            distance = pointOne**2 + pointTwo**2
-            heapq.heappush(heap, (distance, (pointOne, pointTwo)))
+            heapq.heappush(heap, ((point[0]**2 + point[1]**2), (point[0], point[1])))
          
         
         
