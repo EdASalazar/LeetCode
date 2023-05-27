@@ -8,7 +8,7 @@ class Solution:
             num = nums[mid]
         
             if num == target:
-                return nums.index(num)
+                return mid
 
             if num > target:
                 right = mid - 1
