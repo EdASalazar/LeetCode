@@ -9,15 +9,12 @@ class Solution:
         for num in nums:
             total += num
             pre.append(total)
-        print(pre)
   
         for i in range(len(queries)):
             j = len(pre) - 1
-            print(j)
             while j >= 0:
                 if pre[j] <= queries[i]:         
                     ans.append(j + 1)
-                    print('1j', j)
                     break
                 else:
                     j -= 1
