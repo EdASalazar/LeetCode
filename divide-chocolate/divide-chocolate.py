@@ -1,7 +1,5 @@
 class Solution:
     def maximizeSweetness(self, sweetness: List[int], k: int) -> int:
-  
-
 
         people = k + 1
         left = min(sweetness)
@@ -24,5 +22,4 @@ class Solution:
             else:
                 right = mid - 1
 
-        
         return right
