@@ -3,13 +3,10 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        i = 0
         
-        for i in range(len(nums)):
-            if nums[i] == 0:
-                nums.remove(0)
+        for i in nums:
+            if i == 0:
+                nums.remove(i)
                 nums.append(0)
-            else:
-                i += 1    
-            
+
         return nums
