@@ -16,11 +16,11 @@ class Solution:
             possible_letters = letters[digits[index]]
             for letter in possible_letters:
                 path.append(letter)
-                print('first', index, path)
+
                 backtrack(index + 1, path)
-                print('back', index, path)
+              
                 path.pop()
-                print('pop',index, path )
+             
 
                 
         combos = []   
