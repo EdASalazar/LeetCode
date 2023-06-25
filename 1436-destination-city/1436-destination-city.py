@@ -1,19 +1,8 @@
 class Solution:
     def destCity(self, paths: List[List[str]]) -> str:
+        cityDict = dict(paths)
+        print(cityDict)
 
-        departures = set()
-        arrivals = set()
-
-        for path in paths:
-            departures.add(path[0])
-            arrivals.add(path[1])
-            print(departures, arrivals)
-
-        for arrival in arrivals:
-            if arrival not in departures:
-                return arrival
-
-        
-       
-
-        
+        for i in cityDict.values():
+            if i not in cityDict.keys():
+                return i
