@@ -1,9 +1,13 @@
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         ans = 0
+        hashMap = {}
 
-        for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] == nums[j]:
-                    ans += 1
+        for num in nums:
+            if num in hashMap:
+                ans += hashMap[num]
+                hashMap[num] += 1
+            else:
+                hashMap[num] = 1
+  
         return ans
