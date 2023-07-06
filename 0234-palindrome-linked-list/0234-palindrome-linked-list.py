@@ -11,14 +11,4 @@ class Solution:
             arr.append(head.val)
             head = head.next
         
-        i = 0
-        j = len(arr) - 1
-
-        while i < j:
-            if arr[i] == arr[j]:
-                i += 1
-                j -= 1
-            else:
-                return False
-
-        return True
+        return arr == arr[::-1]
