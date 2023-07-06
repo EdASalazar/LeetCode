@@ -6,13 +6,11 @@
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         arr = []
-        pointer = head
 
-        while pointer:
-            arr.append(pointer.val)
-            pointer = pointer.next
+        while head:
+            arr.append(head.val)
+            head = head.next
         
-        print(arr)
         i = 0
         j = len(arr) - 1
 
