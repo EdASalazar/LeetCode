@@ -7,7 +7,8 @@ class Solution:
     def pairSum(self, head: Optional[ListNode]) -> int:
         arr = []
         curr = head
-        ans = 0
+        maxSum = 0
+        
         while curr:
             arr.append(curr.val)
             curr = curr.next
@@ -16,11 +17,11 @@ class Solution:
         j = len(arr) - 1
         while i < j:
             newSum = arr[i] + arr[j]
-            ans = max(ans, newSum)
+            maxSum = max(maxSum, newSum)
             i += 1
             j -= 1
 
         
 
-        return ans
+        return maxSum
         
