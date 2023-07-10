@@ -11,6 +11,5 @@ class Solution:
         while curr:
             ans = 2*ans + curr.val
             curr = curr.next
-        
 
         return ans
