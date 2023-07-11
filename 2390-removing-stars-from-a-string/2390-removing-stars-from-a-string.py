@@ -1,10 +1,17 @@
+from collections import deque
+
 class Solution:
     def removeStars(self, s: str) -> str:
-        stack = []
+        strQueue = deque(s)
+        ans = ""
+      
 
-        for i in range(len(s)):
-            if stack and s[i] == '*':
-                stack.pop(-1)
-            else: stack.append(s[i])
-
-        return "".join(stack)
+        while strQueue: 
+            curr = strQueue.popleft()
+            if curr == "*" and ans:
+                ans = ans[:len(ans)-1]
+            else:
+                ans += curr
+   
+        return ans
+        
